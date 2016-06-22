@@ -42,5 +42,6 @@
         <!-- <property name="hibernate.search.default.indexBase" value="lucene/indexes" /> -->
 
         <mapping resource="Event.hbm.xml" />
+        <mapping resource="Item.hbm.xml" />
     </session-factory>
 </hibernate-configuration>
