@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.raychen518.study</groupId>
+    <artifactId>hibernate</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <!-- 5.2.0.Final -->
+        <hibernate.version>5.0.3.Final</hibernate.version>
+        <!-- 5.5.3.Final -->
+        <hibernate.search.version>5.5.2.Final</hibernate.search.version>
+        <h2.version>1.4.192</h2.version>
+        <!-- 9.4.1208 -->
+        <postgresql.version>9.3-1102-jdbc41</postgresql.version>
+        <oracle.version>11.2.0.1.0</oracle.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-search-orm</artifactId>
+            <version>${hibernate.search.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+        <!-- The following Oracle JDBC driver dependency fails if the local Maven repository does not contain it. -->
+        <!-- Because, the Oracle JDBC drivers are illegal to be in public repositories due to their binary license. -->
+        <!-- View the following article about how to download an Oracle JDBC driver and install it into the local Maven repository. -->
+        <!-- http://stackoverflow.com/questions/1074869/find-oracle-jdbc-driver-in-maven-repository -->
+        <!-- Here is an example Maven command to install an Oracle JDBC driver. -->
+        <!-- mvn install:install-file -Dfile="C:/Users/rchen/Downloads/ojdbc6.jar" -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.1.0 -Dpackaging=jar -->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>${oracle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
