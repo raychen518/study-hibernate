@@ -1,7 +1,9 @@
 package com.raychen518.study.hibernate;
 
+import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
@@ -41,9 +43,12 @@ public class ItemTest {
             Session session = sessionFactory.openSession();
             session.beginTransaction();
 
-            session.save(new Item("Value 11", "Value 12"));
-            session.save(new Item("Value 21", "Value 22"));
-            session.save(new Item("Value 31", "Value 32"));
+            Date createdDate = new Date();
+            for (int i = 0; i < 3; i++) {
+                session.save(new Item(RandomStringUtils.randomAlphanumeric(10),
+                        RandomStringUtils.randomAlphanumeric(10), createdDate));
+            }
+
             session.getTransaction().commit();
             session.close();
         }

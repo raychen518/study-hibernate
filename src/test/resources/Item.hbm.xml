@@ -6,7 +6,8 @@
         <id name="id" column="ID">
             <generator class="increment" />
         </id>
-        <property name="field1" />
-        <property name="field2" />
+        <property name="field1" column="FIELD_1" />
+        <property name="field2" column="FIELD_2" />
+        <property name="createdDate" type="timestamp" column="CREATED_DATE" />
     </class>
 </hibernate-mapping>
