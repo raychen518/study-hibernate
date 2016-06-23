@@ -8,13 +8,14 @@
     <packaging>jar</packaging>
 
     <properties>
+        <!-- 5.0.3.Final (CRDM) -->
         <!-- 5.2.0.Final -->
         <hibernate.version>5.0.3.Final</hibernate.version>
+        <!-- 5.5.2.Final (CRDM) -->
         <!-- 5.5.3.Final -->
         <hibernate.search.version>5.5.2.Final</hibernate.search.version>
         <h2.version>1.4.192</h2.version>
-        <!-- 9.4.1208 -->
-        <postgresql.version>9.3-1102-jdbc41</postgresql.version>
+        <postgresql.version>9.4.1208</postgresql.version>
         <oracle.version>11.2.0.1.0</oracle.version>
         <junit.version>4.12</junit.version>
     </properties>
