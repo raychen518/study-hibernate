@@ -57,7 +57,7 @@ public class EventTest {
             @SuppressWarnings("unchecked")
             List<Event> results = session.createQuery("from Event").list();
             for (Event result : results) {
-                System.out.println(result.getId() + " : " + result.getCreatedDate() + " : " + result.getTitle());
+                System.out.println(result.getId() + " : " + result.getDate() + " : " + result.getTitle());
             }
 
             session.getTransaction().commit();

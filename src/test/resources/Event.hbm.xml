@@ -4,9 +4,9 @@
 <hibernate-mapping package="com.raychen518.study.hibernate">
     <class name="Event" table="EVENTS">
         <id name="id" column="ID">
-            <generator class="increment" />
+            <generator class="native" />
         </id>
-        <property name="title" />
-        <property name="createdDate" type="timestamp" column="CREATION_DATE" />
+        <property name="title" column="TITLE" />
+        <property name="date" type="timestamp" column="CREATED_DATE" />
     </class>
 </hibernate-mapping>

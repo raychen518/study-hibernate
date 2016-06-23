@@ -6,14 +6,14 @@ public class Event {
 
     private Long id;
     private String title;
-    private Date createdDate;
+    private Date date;
 
     public Event() {
     }
 
-    public Event(String title, Date createdDate) {
+    public Event(String title, Date date) {
         this.title = title;
-        this.createdDate = createdDate;
+        this.date = date;
     }
 
     public Long getId() {
@@ -32,12 +32,12 @@ public class Event {
         this.title = title;
     }
 
-    public Date getCreatedDate() {
-        return createdDate;
+    public Date getDate() {
+        return date;
     }
 
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
 }
