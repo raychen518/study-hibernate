@@ -15,7 +15,9 @@
         <!-- 5.5.3.Final -->
         <hibernate.search.version>5.5.2.Final</hibernate.search.version>
         <h2.version>1.4.192</h2.version>
-        <postgresql.version>9.4.1208</postgresql.version>
+        <!-- 9.3-1102-jdbc41 (CRDM) -->
+        <!-- 9.4.1208 -->
+        <postgresql.version>9.3-1102-jdbc41</postgresql.version>
         <oracle.version>11.2.0.1.0</oracle.version>
         <junit.version>4.12</junit.version>
     </properties>
@@ -51,6 +53,11 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>${h2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.4</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
