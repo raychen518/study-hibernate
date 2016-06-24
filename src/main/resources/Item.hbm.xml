@@ -9,5 +9,6 @@
         <property name="field1" column="FIELD_1" />
         <property name="field2" column="FIELD_2" />
         <property name="createdDate" type="timestamp" column="CREATED_DATE" />
+        <property name="modifiedDate" type="timestamp" column="MODIFIED_DATE" />
     </class>
 </hibernate-mapping>

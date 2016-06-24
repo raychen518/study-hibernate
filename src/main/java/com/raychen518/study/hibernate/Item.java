@@ -2,12 +2,30 @@ package com.raychen518.study.hibernate;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import org.hibernate.search.annotations.Analyze;
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Index;
+import org.hibernate.search.annotations.Indexed;
+import org.hibernate.search.annotations.Store;
+
+@Entity
+@Indexed
 public class Item {
 
+    @Id
     private Long id;
+
+    @Field
     private String field1;
+
+    @Field(index = Index.YES, analyze = Analyze.YES, store = Store.YES)
     private String field2;
+
     private Date createdDate;
+    private Date modifiedDate;
 
     public Item() {
     }
@@ -48,6 +66,20 @@ public class Item {
 
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
+    }
+
+    public Date getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = modifiedDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Item [id=" + id + ", field1=" + field1 + ", field2=" + field2 + ", createdDate=" + createdDate
+                + ", modifiedDate=" + modifiedDate + "]";
     }
 
 }
