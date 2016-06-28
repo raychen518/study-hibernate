@@ -57,5 +57,6 @@
 
         <mapping resource="Event.hbm.xml" />
         <mapping resource="Item.hbm.xml" />
+        <mapping resource="Product.hbm.xml" />
     </session-factory>
 </hibernate-configuration>
