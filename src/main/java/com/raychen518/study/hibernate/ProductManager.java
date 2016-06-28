@@ -21,7 +21,7 @@ public class ProductManager {
 
     private void indexAllProducts() throws InterruptedException {
         FullTextSession fullTextSession = Search.getFullTextSession(HibernateUtil.getSessionFactory().getCurrentSession());
-        fullTextSession.createIndexer(ProductA.class).startAndWait();
+        fullTextSession.createIndexer().startAndWait();
     }
 
     public void deleteAllProducts() {
