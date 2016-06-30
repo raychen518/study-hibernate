@@ -11,6 +11,8 @@ public abstract class Product {
     @Id
     protected Long id;
 
+    protected Long serialNumber;
+
     @Field
     protected String name;
 
@@ -27,6 +29,14 @@ public abstract class Product {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(Long serialNumber) {
+        this.serialNumber = serialNumber;
     }
 
     public String getName() {
@@ -63,8 +73,8 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return "Product [id=" + id + ", name=" + name + ", feature=" + feature + ", createdDate=" + createdDate
-                + ", modifiedDate=" + modifiedDate + "]";
+        return "Product [id=" + id + ", serialNumber=" + serialNumber + ", name=" + name + ", feature=" + feature
+                + ", createdDate=" + createdDate + ", modifiedDate=" + modifiedDate + "]";
     }
 
 }

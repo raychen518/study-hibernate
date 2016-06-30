@@ -6,6 +6,7 @@
         <id name="id" column="ID">
             <generator class="increment" />
         </id>
+        <property name="serialNumber" column="SERIAL_NUMBER" />
         <property name="name" column="NAME" />
         <property name="feature" column="FEATURE" />
         <property name="createdDate" type="timestamp" column="CREATED_DATE" />

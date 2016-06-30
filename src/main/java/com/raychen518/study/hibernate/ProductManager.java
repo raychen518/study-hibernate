@@ -42,17 +42,28 @@ public class ProductManager {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
 
-        session.save(new ProductA("feature001", "featureA1001", "featureA2001", new Date()));
-        session.save(new ProductA("feature002", "featureA1002", "featureA2002", new Date()));
-        session.save(new ProductA("feature003", "featureA1003", "featureA2003", new Date()));
+        Date createdDate = new Date();
 
-        session.save(new ProductB("feature001", "featureB1001", "featureB2001", new Date()));
-        session.save(new ProductB("feature002", "featureB1002", "featureB2002", new Date()));
-        session.save(new ProductB("feature003", "featureB1003", "featureB2003", new Date()));
+        session.save(new ProductA(CommonsUtil.generateRandomNumber(), "feature001", "featureA1001", "featureA2001",
+                createdDate));
+        session.save(new ProductA(CommonsUtil.generateRandomNumber(), "feature002", "featureA1002", "featureA2002",
+                createdDate));
+        session.save(new ProductA(CommonsUtil.generateRandomNumber(), "feature003", "featureA1003", "featureA2003",
+                createdDate));
 
-        session.save(new ProductC("feature001", "featureC1001", "featureC2001", new Date()));
-        session.save(new ProductC("feature002", "featureC1002", "featureC2002", new Date()));
-        session.save(new ProductC("feature003", "featureC1003", "featureC2003", new Date()));
+        session.save(new ProductB(CommonsUtil.generateRandomNumber(), "feature001", "featureB1001", "featureB2001",
+                createdDate));
+        session.save(new ProductB(CommonsUtil.generateRandomNumber(), "feature002", "featureB1002", "featureB2002",
+                createdDate));
+        session.save(new ProductB(CommonsUtil.generateRandomNumber(), "feature003", "featureB1003", "featureB2003",
+                createdDate));
+
+        session.save(new ProductC(CommonsUtil.generateRandomNumber(), "feature001", "featureC1001", "featureC2001",
+                createdDate));
+        session.save(new ProductC(CommonsUtil.generateRandomNumber(), "feature002", "featureC1002", "featureC2002",
+                createdDate));
+        session.save(new ProductC(CommonsUtil.generateRandomNumber(), "feature003", "featureC1003", "featureC2003",
+                createdDate));
 
         session.getTransaction().commit();
     }

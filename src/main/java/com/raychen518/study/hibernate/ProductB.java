@@ -20,7 +20,8 @@ public class ProductB extends Product {
     public ProductB() {
     }
 
-    public ProductB(String feature, String featureB1, String featureB2, Date createdDate) {
+    public ProductB(Long serialNumber, String feature, String featureB1, String featureB2, Date createdDate) {
+        this.serialNumber = serialNumber;
         this.feature = feature;
         this.featureB1 = featureB1;
         this.featureB2 = featureB2;
