@@ -14,15 +14,15 @@ public class ProductManager {
     public static void main(String[] args) throws InterruptedException {
         ProductManager productManager = new ProductManager();
         productManager.indexAllProducts();
-        productManager.deleteAllProducts();
+        // productManager.deleteAllProducts();
         productManager.generateSomeProducts();
-        productManager.searchProducts();
-        productManager.searchProducts1();
+        // productManager.searchProducts();
+        // productManager.searchProducts1();
     }
 
     private void indexAllProducts() throws InterruptedException {
         FullTextSession fullTextSession = Search.getFullTextSession(HibernateUtil.getSessionFactory().getCurrentSession());
-        fullTextSession.createIndexer().startAndWait();
+        fullTextSession.createIndexer(ProductA.class).startAndWait();
     }
 
     public void deleteAllProducts() {
@@ -66,7 +66,7 @@ public class ProductManager {
         session.save(new ProductC(CommonsUtil.generateRandomNumber(), "feature003", "featureC1003", "featureC2003",
                 createdDate));
 
-        Long serialNumber = 123L;
+        Long serialNumber = 666L;
         session.save(new ProductA(serialNumber, "feature004", "featureA1004", "featureA2004", createdDate));
         session.save(new ProductA(serialNumber, "feature004", "featureA1004", "featureA2004", createdDate));
         session.save(new ProductA(serialNumber, "feature004", "featureA1004", "featureA2004", createdDate));
