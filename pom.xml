@@ -13,7 +13,7 @@
         <hibernate.version>5.0.3.Final</hibernate.version>
         <!-- 5.5.2.Final (CRDM) -->
         <!-- 5.5.3.Final -->
-        <hibernate.search.version>5.5.2.Final</hibernate.search.version>
+        <hibernate.search.version>5.5.4.Final</hibernate.search.version>
         <h2.version>1.4.192</h2.version>
         <!-- 9.3-1102-jdbc41 (CRDM) -->
         <!-- 9.4.1208 -->

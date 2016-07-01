@@ -4,17 +4,16 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 
-import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Indexed;
 
 @Entity
 @Indexed
 public class ProductB extends Product {
 
-    @Field
+    private static final String NAME = "Product B";
+
     private String featureB1;
 
-    @Field
     private String featureB2;
 
     public ProductB() {
@@ -22,6 +21,7 @@ public class ProductB extends Product {
 
     public ProductB(Long serialNumber, String feature, String featureB1, String featureB2, Date createdDate) {
         this.serialNumber = serialNumber;
+        this.name = NAME;
         this.feature = feature;
         this.featureB1 = featureB1;
         this.featureB2 = featureB2;

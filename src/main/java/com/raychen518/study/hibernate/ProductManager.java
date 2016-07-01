@@ -17,6 +17,7 @@ public class ProductManager {
         productManager.deleteAllProducts();
         productManager.generateSomeProducts();
         productManager.searchProducts();
+        productManager.searchProducts1();
     }
 
     private void indexAllProducts() throws InterruptedException {
@@ -65,6 +66,12 @@ public class ProductManager {
         session.save(new ProductC(CommonsUtil.generateRandomNumber(), "feature003", "featureC1003", "featureC2003",
                 createdDate));
 
+        Long serialNumber = 123L;
+        session.save(new ProductA(serialNumber, "feature004", "featureA1004", "featureA2004", createdDate));
+        session.save(new ProductA(serialNumber, "feature004", "featureA1004", "featureA2004", createdDate));
+        session.save(new ProductA(serialNumber, "feature004", "featureA1004", "featureA2004", createdDate));
+        session.save(new ProductA(serialNumber, "feature004", "featureA1004", "featureA2004", createdDate));
+
         session.getTransaction().commit();
     }
 
@@ -77,6 +84,24 @@ public class ProductManager {
 
         // Set the 2nd method parameter using "Product.class" to get products of the types ProductA, ProductB and ProductC.
         // Set the 2nd method parameter using "ProductA.class" to get products of the types ProductA.
+        Query query = fullTextSession.createFullTextQuery(luceneQuery, ProductA.class);
+
+        @SuppressWarnings("unchecked")
+        List<Product> queryResults = query.list();
+        for (Product queryResult : queryResults) {
+            System.out.println("queryResult: " + queryResult);
+        }
+
+        fullTextSession.getTransaction().commit();
+    }
+
+    private void searchProducts1() {
+        FullTextSession fullTextSession = Search.getFullTextSession(HibernateUtil.getSessionFactory().getCurrentSession());
+        fullTextSession.beginTransaction();
+
+        QueryBuilder queryBuilder = fullTextSession.getSearchFactory().buildQueryBuilder().forEntity(ProductA.class).get();
+        org.apache.lucene.search.Query luceneQuery = queryBuilder.keyword().onFields("serialNumber").matching(123L).createQuery();
+
         Query query = fullTextSession.createFullTextQuery(luceneQuery, ProductA.class);
 
         @SuppressWarnings("unchecked")

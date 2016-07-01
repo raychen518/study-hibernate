@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Id;
 
+import org.hibernate.search.annotations.DocumentId;
 import org.hibernate.search.annotations.Field;
 
 public abstract class Product {
@@ -11,6 +12,8 @@ public abstract class Product {
     @Id
     protected Long id;
 
+    @DocumentId(name = "id")
+    @Field
     protected Long serialNumber;
 
     @Field
