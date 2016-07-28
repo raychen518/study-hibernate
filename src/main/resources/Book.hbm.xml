@@ -8,6 +8,6 @@
         </id>
         <property name="isbn" column="ISBN" />
         <property name="version" column="VERSION" />
-        <property name="content" column="CONTENT" />
+        <property name="content" column="CONTENT" length="4000" />
     </class>
 </hibernate-mapping>

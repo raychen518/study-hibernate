@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import org.hibernate.search.annotations.Analyze;
-import org.hibernate.search.annotations.DocumentId;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Indexed;
@@ -17,7 +16,7 @@ public class Book {
     @Id
     private Long id;
 
-    @DocumentId(name = "_documentId")
+    // @DocumentId(name = "_documentId")
     @Field(index = Index.YES, analyze = Analyze.YES, store = Store.YES)
     private Long isbn;
 

@@ -1,7 +1,6 @@
 package com.raychen518.study.hibernate;
 
 import java.util.List;
-import java.util.Random;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -44,10 +43,9 @@ public class BookManager {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
 
-        Long isbn = Math.abs(new Random().nextLong());
-        session.save(new Book(isbn, 1, "abc"));
-        session.save(new Book(isbn, 2, "def"));
-        session.save(new Book(isbn, 3, "ghi"));
+        session.save(new Book(1231121234561L, 1, "abc"));
+        session.save(new Book(1231121234562L, 2, "def"));
+        session.save(new Book(1231121234563L, 3, "ghi"));
 
         session.getTransaction().commit();
         session.close();
@@ -72,14 +70,14 @@ public class BookManager {
         fullTextSession.beginTransaction();
 
         QueryBuilder queryBuilder = fullTextSession.getSearchFactory().buildQueryBuilder().forEntity(Book.class).get();
-        org.apache.lucene.search.Query luceneQuery = queryBuilder.keyword().onFields("content").matching("ghi").createQuery();
+        org.apache.lucene.search.Query luceneQuery = queryBuilder.keyword().onFields("content").matching("def").createQuery();
 
         Query query = fullTextSession.createFullTextQuery(luceneQuery, Book.class);
 
         @SuppressWarnings("unchecked")
         List<Book> queryResults = query.list();
         for (Book queryResult : queryResults) {
-            System.out.println("queryResult: " + queryResult);
+            System.out.println(queryResult);
         }
 
         fullTextSession.getTransaction().commit();
