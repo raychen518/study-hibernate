@@ -1,6 +1,6 @@
-++++++++++
-Contents
-++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
+Study Notes of Hibernate
+++++++++++++++++++++++++++++++++++++++++++++++++++
 Points
 Hibernate Modules/Artifacts
 Hibernate Release Bundle
