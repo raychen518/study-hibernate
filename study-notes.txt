@@ -1,0 +1,104 @@
+++++++++++
+Contents
+++++++++++
+Points
+Hibernate Modules/Artifacts
+Hibernate Release Bundle
+Hibernate Configuration
+References
+
+http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/
+----------------------------------------------------------------------------------------------------
+2. Tutorial Using Native Hibernate APIs and hbm.xml Mapping
+2.1. The Hibernate configuration file
+2.2. The entity Java class
+2.3. The mapping file
+2.4. Example code
+2.5. Take it further!
+3. Tutorial Using Native Hibernate APIs and Annotation Mappings
+3.1. The Hibernate configuration file
+3.2. The annotated entity Java class
+3.3. Example code
+3.4. Take it further!
+4. Tutorial Using the Java Persistence API (JPA)
+4.1. persistence.xml
+4.2. The annotated entity Java class
+4.3. Example code
+4.4. Take it further!
+5. Tutorial Using Envers
+5.1. persistence.xml
+5.2. The annotated entity Java class
+5.3. Example code
+5.4. Take it further!
+----------------------------------------------------------------------------------------------------
+
+==============================
+Points
+==============================
+- Hibernate is an Object/Relational Mapping (ORM) solution for Java environments.
+- Hibernate takes care of the mapping from Java classes to database tables, and from Java data types to SQL data types.
+  Hibernate also provides data query and retrieval facilities.
+- Knowledge about SQL and data modeling principles help understand Hibernate.
+
+==============================
+Hibernate Modules/Artifacts
+==============================
+Name                    Description
+--------------------------------------------------------------------------------
+hibernate-core          This module is the main (core) Hibernate module. It defines its ORM features and APIs as well as the various integration SPIs.
+hibernate-envers        This module provides Hibernate's historical entity versioning feature.
+hibernate-spatial       This module provides Hibernate's Spatial/GIS data-type support.
+hibernate-osgi          This module provides Hibernate's support for running in OSGi containers.
+hibernate-c3p0          This module integrates the C3P0 connection pooling library into Hibernate.
+hibernate-hikaricp      This module integrates the HikariCP connection pooling library into Hibernate.
+hibernate-proxool       This module integrates the Proxool connection pooling library into Hibernate.
+hibernate-jcache        This module integrates the JCache caching specification into Hibernate, enabling any compliant implementation to become a second-level cache provider.
+hibernate-ehcache       This module integrates the Ehcache caching library into Hibernate as a second-level cache provider.
+hibernate-infinispan    This module integrates the Infinispan caching library into Hibernate as a second-level cache provider.
+
+==============================
+Hibernate Release Bundle
+==============================
+A Hibernate release bundle is structured as follows.
+Directory                           Description
+--------------------------------------------------------------------------------
+lib/required/                       This directory contains the hibernate-core JAR and all of its dependencies.
+                                    All of these JARs are required to be available on the classpath no matter which features of Hibernate are being used.
+lib/envers/                         This directory contains the hibernate-envers JAR and all of its dependencies (beyond those in the lib/required/ and lib/jpa/ directories).
+lib/spatial/                        This directory contains the hibernate-spatial JAR and all of its dependencies (beyond those in the lib/required/ directory).
+lib/osgi/                           This directory contains the hibernate-osgi JAR and all of its dependencies (beyond those in the lib/required/ and lib/jpa/ directories).
+lib/jpa-metamodel-generator/        This directory contains the JAR needed for generating the Criteria API type-safe Metamodel.
+lib/optional/                       This directory contains the JARs needed for the various connection pooling and second-level cache integrations provided by Hibernate, along with their dependencies.
+
+==============================
+Hibernate Configuration
+==============================
+
+
+==============================
+References
+==============================
+Hibernate - Getting Started Guide (5.2)
+http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/
+
+Hibernate - Tutorials (5.2)
+http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/hibernate-tutorials.zip
+
+Hibernate - Release Bundle (5.2.5.Final)
+https://sourceforge.net/projects/hibernate/files/hibernate-orm/5.2.5.Final/
+
+Wikipedia - Object-Relational Mapping
+https://en.wikipedia.org/wiki/Object-relational_mapping
+Note: Read the above article to learn the introduction to ORM.
+
+Martin Fowler - OrmHate
+http://martinfowler.com/bliki/OrmHate.html
+Note: Read the above article to learn the paradigm mismatch problems between the object model representation and the relational data model representation.
+
+Agile Data - Data Modeling 101
+http://www.agiledata.org/essays/dataModeling101.html
+Note: Read the above article to understand data modeling principles.
+
+Wikipedia - Data Modeling
+https://en.wikipedia.org/wiki/Data_modeling
+Note: Read the above article to understand data modeling principles.
