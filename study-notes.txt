@@ -10,11 +10,9 @@ References
 http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/
 ----------------------------------------------------------------------------------------------------
 2. Tutorial Using Native Hibernate APIs and hbm.xml Mapping
-2.1. The Hibernate configuration file
-2.2. The entity Java class
-2.3. The mapping file
-2.4. Example code
-2.5. Take it further!
+3. Tutorial Using Native Hibernate APIs and Annotation Mappings
+4. Tutorial Using the Java Persistence API (JPA)
+
 3. Tutorial Using Native Hibernate APIs and Annotation Mappings
 3.1. The Hibernate configuration file
 3.2. The annotated entity Java class

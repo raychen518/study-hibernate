@@ -20,6 +20,7 @@
 
     <modules>
         <module>hbm</module>
+        <module>annotations</module>
     </modules>
 
     <dependencies>
