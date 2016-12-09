@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
 
     <name>Study of Hibernate</name>
-    <description>A project used to study Hibernate.</description>
+    <description>This project is used to study Hibernate.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -9,8 +9,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>study-hibernate-annotations</artifactId>
+    <artifactId>study-hibernate-hibernate-annotations</artifactId>
 
-    <name>Study of Hibernate - Hibernate Annotations</name>
-    <description>A project used to study the use of the Hibernate annotations and the native APIs of Hibernate for mapping metadata.</description>
+    <name>Study of Hibernate - Utilizing by Hibernate APIs and Annotations</name>
+    <description>This project demonstrates using Hibernate by the Hibernate APIs and the annotations.</description>
 </project>

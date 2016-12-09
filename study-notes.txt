@@ -7,47 +7,32 @@ Hibernate Release Bundle
 Hibernate Configuration
 References
 
-http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/
-----------------------------------------------------------------------------------------------------
-2. Tutorial Using Native Hibernate APIs and hbm.xml Mapping
-3. Tutorial Using Native Hibernate APIs and Annotation Mappings
-4. Tutorial Using the Java Persistence API (JPA)
-
-3. Tutorial Using Native Hibernate APIs and Annotation Mappings
-3.1. The Hibernate configuration file
-3.2. The annotated entity Java class
-3.3. Example code
-3.4. Take it further!
-4. Tutorial Using the Java Persistence API (JPA)
-4.1. persistence.xml
-4.2. The annotated entity Java class
-4.3. Example code
-4.4. Take it further!
-5. Tutorial Using Envers
-5.1. persistence.xml
-5.2. The annotated entity Java class
-5.3. Example code
-5.4. Take it further!
-----------------------------------------------------------------------------------------------------
-
 ==============================
 Points
 ==============================
 - Hibernate is an Object/Relational Mapping (ORM) solution for Java environments.
+
 - Hibernate takes care of the mapping from Java classes to database tables, and from Java data types to SQL data types.
   Hibernate also provides data query and retrieval facilities.
+
 - Knowledge about SQL and data modeling principles help understand Hibernate.
-- For persistent classes (entity classes) to be used by Hibernate, each of them should contain a no-argument constructor,
-  because Hibernate creates objects using Java Reflection.
-- The Hibernate mapping files (the Xxx.hbm.xml files) provide Hibernate with the mapping metadata
-  to determine how to load and store objects of the persistent classes.
+
+- For entity classes to be used by Hibernate, each of them should contain a no-argument constructor,
+  because Hibernate creates objects of entity classes by the Java Reflection API.
+
+- There are generally 3 approaches to utilize Hibernate.
+  - By the Hibernate APIs and the Hibernate mapping files (the Xxx.hbm.xml files).
+  - By the Hibernate APIs and the annotations.
+  - By the JPA APIs.
+
 - The types declared in the Hibernate mapping files are neither Java data types nor SQL database types.
-  Instead, they are the Hibernate mapping types, which are converters which translate between Java data types and SQL data types.
-- If a Hibernate mapping type is not specified, Hibernate tries to determine the correct conversion and mapping type autonomously, by Java Reflection
-  Hibernate determines the mapping types using Java Reflection when the mapping files are processed.
-  This process adds overhead in terms of time and resources.
-  If startup performance is important, consider explicitly defining the mapping types.
-  
+  Instead, they are the Hibernate mapping types, which are converters that translate between Java data types and SQL data types.
+
+- If a Hibernate mapping type is not specified, Hibernate tries to determine the correct conversion autonomously
+  by the Java Reflection API, when the Hibernate mapping files are processed.
+  This determination process adds overhead in terms of time and resources.
+  So, if the startup performance is important, it can be considered to explicitly declare the Hibernate mapping types.
+
 ==============================
 Hibernate Modules/Artifacts
 ==============================
@@ -77,11 +62,6 @@ lib/spatial/                        This directory contains the hibernate-spatia
 lib/osgi/                           This directory contains the hibernate-osgi JAR and all of its dependencies (beyond those in the lib/required/ and lib/jpa/ directories).
 lib/jpa-metamodel-generator/        This directory contains the JAR needed for generating the Criteria API type-safe Metamodel.
 lib/optional/                       This directory contains the JARs needed for the various connection pooling and second-level cache integrations provided by Hibernate, along with their dependencies.
-
-==============================
-Hibernate Configuration
-==============================
-
 
 ==============================
 References

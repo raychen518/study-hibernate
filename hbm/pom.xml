@@ -9,8 +9,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>study-hibernate-hbm</artifactId>
+    <artifactId>study-hibernate-hibernate-hbm-files</artifactId>
 
-    <name>Study of Hibernate - HBM</name>
-    <description>A project used to study the use of the HBM file (hbm.xml) and the native APIs of Hibernate for mapping metadata.</description>
+    <name>Study of Hibernate - Utilizing by Hibernate APIs and HBM Files</name>
+    <description>This project demonstrates utilizing Hibernate by the Hibernate APIs and the Hibernate mapping files (the Xxx.hbm.xml files).</description>
 </project>
