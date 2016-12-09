@@ -39,7 +39,17 @@ Points
 - Hibernate takes care of the mapping from Java classes to database tables, and from Java data types to SQL data types.
   Hibernate also provides data query and retrieval facilities.
 - Knowledge about SQL and data modeling principles help understand Hibernate.
-
+- For persistent classes (entity classes) to be used by Hibernate, each of them should contain a no-argument constructor,
+  because Hibernate creates objects using Java Reflection.
+- The Hibernate mapping files (the Xxx.hbm.xml files) provide Hibernate with the mapping metadata
+  to determine how to load and store objects of the persistent classes.
+- The types declared in the Hibernate mapping files are neither Java data types nor SQL database types.
+  Instead, they are the Hibernate mapping types, which are converters which translate between Java data types and SQL data types.
+- If a Hibernate mapping type is not specified, Hibernate tries to determine the correct conversion and mapping type autonomously, by Java Reflection
+  Hibernate determines the mapping types using Java Reflection when the mapping files are processed.
+  This process adds overhead in terms of time and resources.
+  If startup performance is important, consider explicitly defining the mapping types.
+  
 ==============================
 Hibernate Modules/Artifacts
 ==============================
