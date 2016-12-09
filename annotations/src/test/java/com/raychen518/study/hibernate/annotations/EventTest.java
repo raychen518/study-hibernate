@@ -1,4 +1,4 @@
-package com.raychen518.study.hibernate.hbm;
+package com.raychen518.study.hibernate.annotations;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

@@ -21,6 +21,7 @@
     <modules>
         <module>hbm</module>
         <module>annotations</module>
+        <module>entitymanager</module>
     </modules>
 
     <dependencies>
