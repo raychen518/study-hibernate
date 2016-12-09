@@ -21,7 +21,7 @@
     <modules>
         <module>hbm</module>
         <module>annotations</module>
-        <module>entitymanager</module>
+        <module>jpa</module>
     </modules>
 
     <dependencies>
